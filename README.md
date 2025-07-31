@@ -1,8 +1,12 @@
-## Леонардо ДайКинчик
-Телеграм тэг: `@leo_give_movie_bot`
+## Leonardo GiveMovie Telegram bot
 
-Бывает в беседе прозвучит название какого-нибудь фильма, а ты в душе не чаешь, о чём он и где его можно посмотреть.
+Telegram tag: `@leo_give_movie_bot`
 
-На помощь приходит наш супер-умный бот, построенный на базе API сервиса "Кинопоиск". Там мы получаем корректное название (поиск фильма по неполному / похожему названию встроен - _клевая фича!_), год выпуска, рейтинг, постер и краткое описание. Далее, используя "дружественный" сервису сайт, мы даем возможность сразу посмотреть этот фильм!
+*Ever had someone mention a movie in a chat, and you realized you had no idea what it was or where to watch it?*
+**This is where our smart Telegram bot comes in.** 
 
-Также мы используем базу данных, позволяющую каждому пользователю отслеживать историю своих запросов с указанием времени по Москве. А также, для особо интересующихся, мы аггрегируем все запросы одного пользователя, чтобы показать, сколько раз мы выдавали каждый фильм.
+Built using the asynchronous `aiogram` library and powered by the `KinoPoisk API`, the bot can identify movies even from partial or approximate titles, returning the correct name, release year, rating, poster, and a brief description. It also provides a direct link to a third-party website where you can watch the film.
+
+All user queries are stored in a `SQLite` database, allowing each user to view their search history with timestamps. Additionally, the bot aggregates all requests to show how many times each movie has been searched.
+
+This project was developed as part of the Advanced Python Programming course at Yandex School of Data Analysis (Moscow). That is why the interface has Russian language. The main goal was to explore asynchronous network interaction with clients, design an application capable of handling user requests, integrate a modern database, and finally deploy the service to Amazon AWS for stable, production-ready performance.
